@@ -32,7 +32,7 @@ export const Hero = () => {
         e && e.preventDefault();
         if (!search) return;
 
-        axios.get(`http://localhost:3000/weather/${search}`)
+        axios.get(`https://atmos-server.onrender.com/weather/${search}`)
             .then((res) => {
                 setData(res.data);
                 setSearch(null);
