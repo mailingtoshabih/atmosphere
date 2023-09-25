@@ -144,7 +144,7 @@ export const Hero = () => {
                             <img
                                 src={data?.current?.condition?.text && cloudy}
                                 alt="cloud"
-                                className='w-36 sm:w-48 md:w-60 h-fit mx-auto'
+                                className='w-36 h-36 sm:w-48 md:w-60  mx-auto'
                             />
 
 
