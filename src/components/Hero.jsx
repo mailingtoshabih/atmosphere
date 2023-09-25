@@ -63,7 +63,7 @@ export const Hero = () => {
                         text-center 
                         mx-auto'>
 
-                        <h1 className='text-5xl
+                        <h1 className='sm:text-5xl text-3xl
                         text-gray-600
                         font-bold
                         '>
@@ -72,15 +72,15 @@ export const Hero = () => {
 
 
                         <form onSubmit={handleSubmit}
-                            className='mt-16
+                            className='mt-5 sm:mt-16
                             w-full px-3
-                            bg-white  border-4 border-red-300
-                            flex  
+                            bg-white border-2 border-red-300
+                            flex 
                             rounded-full'>
 
                             <input
-                                className={`py-5
-                                    px-10 
+                                className={`py-2 sm:py-5
+                                    px-3 sm:px-10 
                                     text-center
                                     w-full
                                     bg-white
@@ -111,7 +111,7 @@ export const Hero = () => {
 
 
 
-                        <div className='my-20
+                        <div className='my-5 sm:my-20
                             w-full
                             grid gap-5
                             grid-cols-2
@@ -121,11 +121,11 @@ export const Hero = () => {
 
                             <div className=''>
 
-                                <div className='h-fit text-7xl text-gray-600 my-auto'>
+                                <div className='h-fit text-3xl sm:text-7xl text-gray-600 my-auto'>
                                     <p>
                                         {data?.current?.temp_c}°C
                                     </p>
-                                    <p className='text-blue-400 text-5xl font-bold'>
+                                    <p className='text-blue-400 text-2xl sm:text-5xl font-bold'>
                                         {data?.current?.temp_f}°F
                                     </p>
                                 </div>
@@ -144,12 +144,12 @@ export const Hero = () => {
                             <img
                                 src={data?.current?.condition?.text && cloudy}
                                 alt="cloud"
-                                className='w-48 sm:w-60 h-fit mx-auto'
+                                className='w-36 sm:w-48 md:w-60 h-fit mx-auto'
                             />
 
 
                             <div className='
-                                text-7xl text-center
+                                text-3xl sm:text-7xl text-center
                                 text-gray-600 '>
 
                                 <p>
@@ -157,7 +157,7 @@ export const Hero = () => {
                                 </p>
 
 
-                                <div className='text-3xl text-black font-semibold'>
+                                <div className='text-2xl sm:text-3xl text-black font-semibold'>
                                     <p>
                                         {data?.location?.name}
                                     </p>
@@ -169,7 +169,7 @@ export const Hero = () => {
 
                             </div>
 
-                            <div className='block lg:hidden text-4xl
+                            <div className='block lg:hidden text-2xl sm:text-4xl
                                 text-center
                                 text-gray-600 
                                 p-2 px-6 w-full rounded-xl
@@ -179,10 +179,11 @@ export const Hero = () => {
                                     {data?.current?.condition?.text}
                                 </p>
 
-                                <div className='flex justify-between space-x-4'>
-                                    <p className='text-xl'>Feels Like</p>
-                                    <p className='text-2xl text-blue-400'>
-                                        {data?.current?.feelslike_c}°C / {data?.current?.feelslike_f}°F
+                                <div className='sm:flex justify-between sm:space-x-4'>
+                                    <p className='text-md sm:text-xl'>Feels Like</p>
+                                    <p className='text-sm sm:text-2xl text-blue-400'>
+                                        {data?.current?.feelslike_c}°C  <br />
+                                        {data?.current?.feelslike_f}°F
                                     </p>
                                 </div>
 

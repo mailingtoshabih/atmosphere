@@ -22,7 +22,7 @@ export const Showdata = ({ data, value, unit }) => {
                 {data && data}
             </p>
 
-            <div className='text-7xl font-bold'>
+            <div className='text-4xl sm:text-7xl font-bold'>
                 {value && value}
             </div>
 
